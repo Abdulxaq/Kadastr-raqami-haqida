@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kad.num</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app" >
+        <p class="sar" @click="next0()" >Kadastr raqami</p>
+        <p class="theory" :class=" sh === 0 ? 'm300' : '' ">Kadastr raqami yer uchastkasi, bino, inshootga tegishli O‘zbekiston Respublikasi hududida takrorlanmaydigan raqamdir, u qonun hujjatlari bilan belgilangan tartibda uni shakllantirishda beriladi va u ro‘yxatdan o‘tkazilgan huquqning yagona obyekti sifatida mavjud bo‘lguniga qadar saqlanib qoladi.</p>
+        <p class="theory" :class=" sh === 1 ? 'm300' : '' ">AA — mintaqaning raqami (kodi)ni bildiruvchi ikki razryadli o‘nli son.</p>
+        <p class="theory" :class=" sh === 2 ? 'm300' : '' ">VV — mintaqa tarkibidagi ma’muriy-hududiy tuzilma (ma’muriy tuman, viloyat bo‘ysunishidagi shahar)ning raqami (kodi)ni bildiruvchi ikki razryadli o‘nli son.</p>
+        <p class="theory" :class=" sh === 3 ? 'm300' : '' ">SS — kadastr zonasi raqami (kodi)ni bildiruvchi ikki razryadli o‘nli son.</p>
+        <p class="theory" :class=" sh === 4 ? 'm300' : '' ">DD — kadastr zonasi doirasida kadastr massivi raqami (kodi)ni bildiruvchi ikki razryadli o‘nli son.</p>
+        <p class="theory" :class=" sh === 5 ? 'm300' : '' ">EE — kadastr massivi doirasida kadastr mavzesi raqami (kodi)ni bildiruvchi ikki razryadli o‘nli son.</p>
+        <p class="theory" :class=" sh === 6 ? 'm300' : '' ">FFFF — kadastr mavzesi doirasida yer uchastkasi raqami (kodi)ni bildiruvchi to‘rt razryadli o‘nli son.</p>
+        <p class="theory" :class=" sh === 7 ? 'm300' : '' ">GGGG — yer uchastkasi doirasida bino, inshoot raqami (kodi)ni bildiruvchi to‘rt razryadli o‘nli son.</p>
+        <p class="theory" :class=" sh === 8 ? 'm300' : '' ">NNN — bino, inshootlar bir qismi raqami (kodi)ni bildiruvchi uch razryadli o‘nli son.</p>
+
+     
+        <div class="num" >
+            <p @click="next1()" >AA</p><span>:</span>
+            <p @click="next2()" >VV</p><span>:</span>
+            <p @click="next3()" >SS</p><span>:</span>
+            <p @click="next4()" >DD</p><span>:</span>
+            <p @click="next5()" >EE</p><span>:</span>
+            <p @click="next6()" >FFFF</p><span>:</span>
+            <p @click="next7()">GGGG</p><span>:</span>
+            <p >HHH</p>
+        </div>
+
+        <img v-if="sh === 0"src="images/00.jpg"></img>
+        <img v-if="sh === 1"src="images/AA.PNG"></img>
+        <img v-if="sh === 2"src="images/VV.PNG"></img>
+        <img v-if="sh === 3"src="images/SS.PNG"></img>
+        <img v-if="sh === 4"src="images/DD.PNG"></img>
+        <img v-if="sh === 5"src="images/EE.PNG"></img>
+        <img v-if="sh === 6"src="images/FFFF.PNG"></img>
+        <img v-if="sh === 7"src="images/GGGG.PNG"></img>
+
+
+    
+
+
+
+    </div>
+    <script src="vue.js" ></script>
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                sh:0
+            },
+            methods: {
+                next0(){
+                    this.sh = 0
+                },
+                next1(){
+                    this.sh = 1
+                },
+                next2(){
+                    this.sh = 2
+                },
+                next3(){
+                    this.sh = 3
+                },
+                next4(){
+                    this.sh = 4
+                },
+                next5(){
+                    this.sh = 5
+                },
+                next6(){
+                    this.sh = 6
+                },
+                next7(){
+                    this.sh = 7
+                },
+            },
+        })
+    </script>
+</body>
+</html>
